@@ -1,4 +1,4 @@
-package JavaCore.NgonNguLapTrinh.baitap;
+package NgonNguLapTrinh.baitap;
 
 
 public class HelloWorld {

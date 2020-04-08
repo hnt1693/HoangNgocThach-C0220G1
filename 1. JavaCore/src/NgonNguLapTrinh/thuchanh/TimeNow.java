@@ -1,4 +1,4 @@
-package JavaCore.NgonNguLapTrinh.thuchanh;
+package NgonNguLapTrinh.thuchanh;
 
 import java.sql.Timestamp;
 import java.util.Date;
