@@ -18,6 +18,7 @@ public class ArrayIndexOutOfBoundsException {
             System.out.println("Lỗi index nằm ngoài phạm vi của mang index > " + (x.length-1) );
         }catch (InputMismatchException e){
             System.out.println("Vui lòng nhập 1 số");
+            System.out.println(x[1]);
         }
     }
 
