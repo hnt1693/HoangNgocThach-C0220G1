@@ -1,22 +1,24 @@
 package CaseStudy.Models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public abstract class Services implements Serializable {
-    public static int quantityOfService = 0;
     String id;
     String nameService;
     float usedArea;
     int rentCost;
     int maxPeoples;
     String typeOfRent;
+    ArrayList<AdditionalServices> additionalServicesList = new ArrayList<>();
 
-    public Services( float usedArea, int rentCost, int maxPeoples, String typeOfRent) {
+    public Services(String id, String nameService, float usedArea, int rentCost, int maxPeoples, String typeOfRent) {
+        this.id = id;
+        this.nameService = nameService;
         this.usedArea = usedArea;
         this.rentCost = rentCost;
         this.maxPeoples = maxPeoples;
         this.typeOfRent = typeOfRent;
-        quantityOfService++;
     }
 
     public String getId() {

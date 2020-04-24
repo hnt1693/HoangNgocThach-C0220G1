@@ -1,9 +1,6 @@
 package CaseStudy.Controllers;
 
-import CaseStudy.Models.House;
-import CaseStudy.Models.Room;
-import CaseStudy.Models.Services;
-import CaseStudy.Models.Villa;
+import CaseStudy.Models.*;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -11,21 +8,21 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MainController {
-    static ArrayList<Services> servicesArrayList = new ArrayList<>();
+    static ArrayList<Villa> villaList = new ArrayList<>();
+    static ArrayList<House> houseList = new ArrayList<>();
+    static ArrayList<Room> roomList = new ArrayList<>();
+    static ArrayList<Customer> customers = new ArrayList<>();
     static int selectedMainMenu;
     static int selectedServicesMenu;
 
     public static void main(String[] args) {
 
-        File tempFile = new File("/media/fil-arettes/STUDY AND WORK/6. MODULE2/HoangNgocThach-C0220G1/1. JavaCore/src/CaseStudy/Data/services.csv");
+        File tempFile = new File("/media/fil-arettes/STUDY AND WORK/6. MODULE2/HoangNgocThach-C0220G1/1. JavaCore/src/CaseStudy/Data/room.csv");
         boolean exists = tempFile.exists();
         System.out.println(exists);
         if (exists) {
-            servicesArrayList = ReadWriteData.load();
-            Services.quantityOfService = servicesArrayList.size();
+            roomList = ReadWriteData.loadRoomList();
         }
-
-
         menuProgram();
     }
 
@@ -80,20 +77,20 @@ public class MainController {
             switch (selectedMenu) {
                 case 1: {
                     Villa villa = AddNewService.addVilla();
-                    servicesArrayList.add(villa);
-                    ReadWriteData.write(servicesArrayList);
+                    villaList.add(villa);
+                    ReadWriteData.write(villa);
                     break;
                 }
                 case 2: {
                     House house = AddNewService.addHouse();
-                    servicesArrayList.add(house);
-                    ReadWriteData.write(servicesArrayList);
+                    houseList.add(house);
+                    ReadWriteData.write(house);
                     break;
                 }
                 case 3: {
                     Room room = AddNewService.addRoom();
-                    servicesArrayList.add(room);
-                    ReadWriteData.write(servicesArrayList);
+                    roomList.add(room);
+                    ReadWriteData.write(room);
                     break;
                 }
                 case 5: {
@@ -116,9 +113,55 @@ public class MainController {
                 showServicesMenu();
                 break;
             }
-
-
+            case 3: {
+                addNewCustomer();
+                break;
+            }
+            case 4: {
+                showCustomerInfor();
+                break;
+            }
+            case 5: {
+                addNewBooking();
+                break;
+            }
+            case 6: {
+                showEmployeeInfor();
+                break;
+            }
+            case 7: {
+                bookingMovieTicket();
+                break;
+            }
+            case 8:{
+                findEmployee();
+                break;
+            }
         }
+    }
+
+    private static void findEmployee() {
+    }
+
+    private static void bookingMovieTicket() {
+    }
+
+    private static void showEmployeeInfor() {
+    }
+
+    private static void addNewBooking() {
+        AddNewBooking.addNewBooking();
+    }
+
+    private static void showCustomerInfor() {
+        AddNewCustomer.showCustomerInfor();
+    }
+
+    private static void addNewCustomer() {
+       Customer customer =  AddNewCustomer.addNewCustomer();
+       customers.add(customer);
+       ReadWriteData.write(customer);
+
     }
 
     private static void showServicesMenu() {
@@ -151,33 +194,27 @@ public class MainController {
     private static void actionShowServicesMenu(int selectedMenu) {
         switch (selectedMenu) {
             case 1: {
-                ArrayList<Services> servicesArrayList = ReadWriteData.load();
-                for (Services services : servicesArrayList) {
-                    if (services instanceof Villa) {
-                        services.showInfor();
-                        System.out.println();
-                    }
-                }
+                ShowService.showVillaList();
                 break;
             }
             case 2: {
-                ArrayList<Services> servicesArrayList = ReadWriteData.load();
-                for (Services services : servicesArrayList) {
-                    if (services instanceof House) {
-                        services.showInfor();
-                        System.out.println();
-                    }
-                }
+                ShowService.showHouseList();
                 break;
             }
             case 3: {
-                ArrayList<Services> servicesArrayList = ReadWriteData.load();
-                for (Services services : servicesArrayList) {
-                    if (services instanceof Room) {
-                        services.showInfor();
-                        System.out.println();
-                    }
-                }
+                ShowService.showRoomList();
+                break;
+            }
+            case 4: {
+                ShowService.showAllVillaIsNotDuplicate();
+                break;
+            }
+            case 5: {
+                ShowService.showAllHouseIsNotDuplicate();
+                break;
+            }
+            case 6: {
+                ShowService.showAllRoomIsNotDuplicate();
                 break;
             }
             case 8: {
@@ -187,4 +224,5 @@ public class MainController {
             }
         }
     }
+
 }
