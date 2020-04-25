@@ -17,7 +17,7 @@ import org.apache.commons.csv.CSVRecord;
 
 public class ReadWriteData {
     public static void write(Object object) {
-        String path = "/media/oem/STUDY AND WORK/6. MODULE2/HoangNgocThach-C0220G1/1. JavaCore/src/CaseStudy/Data/" + (object).getClass().getSimpleName() + ".csv";
+        String path = "/media/fil/STUDY AND WORK/6. MODULE2/HoangNgocThach-C0220G1/1. JavaCore/src/CaseStudy/Data/" + (object).getClass().getSimpleName() + ".csv";
         if (object instanceof Villa) {
             try {
                 FileWriter fileWriter = new FileWriter(new File(path), true);
@@ -93,7 +93,7 @@ public class ReadWriteData {
     public static ArrayList<Room> loadRoomList() {
         ArrayList<Room> rooms = new ArrayList<>();
         try {
-            String path = "/media/oem/STUDY AND WORK/6. MODULE2/HoangNgocThach-C0220G1/1. JavaCore/src/CaseStudy/Data/Room.csv";
+            String path = "/media/fil/STUDY AND WORK/6. MODULE2/HoangNgocThach-C0220G1/1. JavaCore/src/CaseStudy/Data/Room.csv";
             BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
             for (CSVRecord csvRecord : csvParser) {
@@ -117,7 +117,7 @@ public class ReadWriteData {
     public static ArrayList<House> loadHouseList() {
         ArrayList<House> houses = new ArrayList<>();
         try {
-            String path = "/media/oem/STUDY AND WORK/6. MODULE2/HoangNgocThach-C0220G1/1. JavaCore/src/CaseStudy/Data/House.csv";
+            String path = "/media/fil/STUDY AND WORK/6. MODULE2/HoangNgocThach-C0220G1/1. JavaCore/src/CaseStudy/Data/House.csv";
             BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
             for (CSVRecord csvRecord : csvParser) {
@@ -143,7 +143,7 @@ public class ReadWriteData {
     public static ArrayList<Villa> loadVillaList() {
         ArrayList<Villa> villas = new ArrayList<>();
         try {
-            String path = "/media/oem/STUDY AND WORK/6. MODULE2/HoangNgocThach-C0220G1/1. JavaCore/src/CaseStudy/Data/Villa.csv";
+            String path = "/media/fil/STUDY AND WORK/6. MODULE2/HoangNgocThach-C0220G1/1. JavaCore/src/CaseStudy/Data/Villa.csv";
             BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
             for (CSVRecord csvRecord : csvParser) {
@@ -170,7 +170,7 @@ public class ReadWriteData {
     public static ArrayList<Customer> LoadCustomerList() {
         ArrayList<Customer> customers = new ArrayList<>();
         try {
-            String path = "/media/oem/STUDY AND WORK/6. MODULE2/HoangNgocThach-C0220G1/1. JavaCore/src/CaseStudy/Data/Customer.csv";
+            String path = "/media/fil/STUDY AND WORK/6. MODULE2/HoangNgocThach-C0220G1/1. JavaCore/src/CaseStudy/Data/Customer.csv";
             BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
             for (CSVRecord csvRecord : csvParser) {
