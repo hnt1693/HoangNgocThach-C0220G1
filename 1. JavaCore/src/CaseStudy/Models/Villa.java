@@ -71,4 +71,5 @@ public class Villa extends Services {
         return "Villa [ id=" + id + " , usedArea=" + usedArea + " , rentCost=" + rentCost + " , maxPeoples=" + maxPeoples + " , typeOfRent=" + typeOfRent
                 + " , standardOfRoom=" + standardsOfRoom + " , details=" + details + " , swimPoolArea=" + swimPoolArea + " , stories=" + stories + " ]\n";
     }
+
 }

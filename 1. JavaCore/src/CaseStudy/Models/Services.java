@@ -2,6 +2,7 @@ package CaseStudy.Models;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public abstract class Services implements Serializable {
     String id;
@@ -71,4 +72,16 @@ public abstract class Services implements Serializable {
 
     public abstract void showInfor();
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Services services = (Services) o;
+        return nameService.equals(services.nameService);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameService);
+    }
 }

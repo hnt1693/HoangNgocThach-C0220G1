@@ -4,25 +4,27 @@ import CaseStudy.Models.House;
 import CaseStudy.Models.Room;
 import CaseStudy.Models.Villa;
 
+import javax.lang.model.type.MirroredTypeException;
 import java.util.*;
 
 public class ShowService {
     static void showAllVillaIsNotDuplicate() {
         ArrayList<Villa> temp = ReadWriteData.loadVillaList();
-        TreeSet<Villa> villas = new TreeSet<>(new Comparator<Villa>() {
-            @Override
-            public int compare(Villa o1, Villa o2) {
-                return o2.getNameService().compareTo(o1.getNameService());
-            }
-        });
+        TreeSet<Villa> villas = new TreeSet<>((o1, o2) -> o1.getNameService().compareTo(o2.getNameService()));
         villas.addAll(temp);
-        villas.forEach(item->item.showInfor());
+        villas.forEach(item -> item.showInfor());
     }
 
     static void showAllHouseIsNotDuplicate() {
+        TreeSet<House> houses = new TreeSet<>((o1, o2) ->  o1.getNameService().compareTo(o2.getNameService()));
+        houses.addAll(ReadWriteData.loadHouseList());
+        houses.forEach(item->item.showInfor());
     }
 
     static void showAllRoomIsNotDuplicate() {
+        TreeSet<Room> rooms = new TreeSet<>((o1, o2) -> o1.getNameService().compareTo(o2.getNameService()));
+        rooms.addAll(ReadWriteData.loadRoomList());
+        rooms.forEach(item->item.showInfor());
     }
 
     static void showRoomList() {

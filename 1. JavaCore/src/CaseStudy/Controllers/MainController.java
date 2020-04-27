@@ -3,9 +3,7 @@ package CaseStudy.Controllers;
 import CaseStudy.Models.*;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 
 public class MainController {
     static ArrayList<Villa> villaList = new ArrayList<>();
@@ -133,7 +131,7 @@ public class MainController {
                 bookingMovieTicket();
                 break;
             }
-            case 8:{
+            case 8: {
                 findEmployee();
                 break;
             }
@@ -144,9 +142,35 @@ public class MainController {
     }
 
     private static void bookingMovieTicket() {
+        Scanner scanner = new Scanner(System.in);
+        Queue<String> listBooking = new LinkedList<>();
+        int QUANTITIES_BOOK = 10;
+            System.out.println("Add new BookingMovieTicket : ");
+            System.out.println("Name : ");
+            String name = scanner.nextLine();
+            listBooking.add(name);
+
+
+        listBooking.offer("Hoang Ngoc Thach");
+        listBooking.offer("Tran Xuan Son");
+        listBooking.offer("Nguyen Thanh Tung");
+        listBooking.add("test");
+        System.out.println(listBooking.poll());
+        Iterator<String> iterator = listBooking.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
     }
 
     private static void showEmployeeInfor() {
+        Map map = ReadWriteData.loadEmployeeList();
+        Iterator<Map.Entry<String, Employee>> itr = map.entrySet().iterator();
+
+        while (itr.hasNext()) {
+            Map.Entry<String, Employee> entry = itr.next();
+            System.out.println("Key = " + entry.getKey() +
+                    ", Value = " + entry.getValue());
+        }
     }
 
     private static void addNewBooking() {
@@ -158,9 +182,9 @@ public class MainController {
     }
 
     private static void addNewCustomer() {
-       Customer customer =  AddNewCustomer.addNewCustomer();
-       customers.add(customer);
-       ReadWriteData.write(customer);
+        Customer customer = AddNewCustomer.addNewCustomer();
+        customers.add(customer);
+        ReadWriteData.write(customer);
 
     }
 

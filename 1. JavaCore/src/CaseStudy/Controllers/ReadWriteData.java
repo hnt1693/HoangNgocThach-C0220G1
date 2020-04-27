@@ -6,6 +6,8 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Pattern;
 import java.util.zip.CRC32;
 
@@ -166,6 +168,30 @@ public class ReadWriteData {
 
         return villas;
     }
+
+    public static Map loadEmployeeList() {
+        Map map = new HashMap();
+        try {
+            String path = "/media/fil/STUDY AND WORK/6. MODULE2/HoangNgocThach-C0220G1/1. JavaCore/src/CaseStudy/Data/Employee.csv";
+            BufferedReader reader = Files.newBufferedReader(Paths.get(path));
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+            for (CSVRecord csvRecord : csvParser) {
+                String id = csvRecord.get(0);
+                String name = csvRecord.get(1);
+                int age = Integer.parseInt(csvRecord.get(2));
+                String address = csvRecord.get(3);
+                Employee employee = new Employee(name, age, address);
+
+                map.put(id, employee);
+            }
+
+        } catch (Exception e) {
+
+        }
+
+        return map;
+    }
+
 
     public static ArrayList<Customer> LoadCustomerList() {
         ArrayList<Customer> customers = new ArrayList<>();
