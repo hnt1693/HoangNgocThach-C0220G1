@@ -1,0 +1,8 @@
+insert into furama.NhanVien (IDNhanVien, HoTen, IDViTri, IDTrinhDo, IDBoPhan, NgaySinh, soCMND, Luong, SDT, Email, DiaChi) values (1, 'Hoàng Ngọc Thạch', 1, 1, 1, '1993-05-04', 197314284, 10000000, 0915455131, 'hnt1693@gmail.com', 'Quảng Trị');
+insert into furama.NhanVien (IDNhanVien, HoTen, IDViTri, IDTrinhDo, IDBoPhan, NgaySinh, soCMND, Luong, SDT, Email, DiaChi) values (2, 'Trần Văn Thanh', 2, 2, 1, '2020-05-04', 1974174414, 10000000, 0912412532, 'thanhtrt@gmail.com
+
+', 'Huế');
+insert into furama.NhanVien (IDNhanVien, HoTen, IDViTri, IDTrinhDo, IDBoPhan, NgaySinh, soCMND, Luong, SDT, Email, DiaChi) values (3, 'Nguyễn Xuân Khánh', 3, 1, 1, '2020-05-10', 1312312312, 11000000, 0915425321, 'xuankhanh@gmail.com', 'Quảng Trị');
+insert into furama.NhanVien (IDNhanVien, HoTen, IDViTri, IDTrinhDo, IDBoPhan, NgaySinh, soCMND, Luong, SDT, Email, DiaChi) values (4, 'Trần Hoàng', 4, 1, 1, '2020-05-04', 1234134123, 12000000, 01236523352, 'hoangtran@yahoo.com', 'Đà Nẵng');
+insert into furama.NhanVien (IDNhanVien, HoTen, IDViTri, IDTrinhDo, IDBoPhan, NgaySinh, soCMND, Luong, SDT, Email, DiaChi) values (5, 'Võ Minh Anh', 4, 2, 4, '2020-05-04', 1234512413, 13000000, 12312312333, 'ngoisao@yahoo.com', 'Huế');
+insert into furama.NhanVien (IDNhanVien, HoTen, IDViTri, IDTrinhDo, IDBoPhan, NgaySinh, soCMND, Luong, SDT, Email, DiaChi) values (6, 'Lê Minh Nghĩa', 5, 2, 3, '2020-05-04', 1231241414, 13200000, 21312312312, 'sidaOke@gmail.com', 'Đà Nẵng');

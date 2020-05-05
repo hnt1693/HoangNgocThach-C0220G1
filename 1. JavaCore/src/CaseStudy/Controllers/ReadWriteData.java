@@ -5,9 +5,7 @@ import CaseStudy.Models.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Pattern;
 import java.util.zip.CRC32;
 
@@ -83,6 +81,18 @@ public class ReadWriteData {
                 fileWriter.close();
                 csvPrinter.close();
                 System.out.println("Thêm booking thành công !");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else if(object instanceof Employee){
+            try {
+                FileWriter fileWriter = new FileWriter(new File(path), true);
+                CSVPrinter csvPrinter = new CSVPrinter(fileWriter, CSVFormat.DEFAULT);
+                csvPrinter.printRecord(((Employee) object).getId(),((Employee) object).getName(),((Employee) object).getAge(),((Employee) object).getAddress());
+                csvPrinter.flush();
+                fileWriter.close();
+                csvPrinter.close();
+                System.out.println("Thêm Employee thành công !");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -181,7 +191,6 @@ public class ReadWriteData {
                 int age = Integer.parseInt(csvRecord.get(2));
                 String address = csvRecord.get(3);
                 Employee employee = new Employee(name, age, address);
-
                 map.put(id, employee);
             }
 
@@ -191,7 +200,6 @@ public class ReadWriteData {
 
         return map;
     }
-
 
     public static ArrayList<Customer> LoadCustomerList() {
         ArrayList<Customer> customers = new ArrayList<>();
@@ -216,6 +224,27 @@ public class ReadWriteData {
         }
 
         return customers;
+    }
+
+    public static Stack<Employee> loadEmployeeArrayList() {
+        Stack<Employee> employees = new Stack<>();
+        try {
+            String path = "/media/fil/STUDY AND WORK/6. MODULE2/HoangNgocThach-C0220G1/1. JavaCore/src/CaseStudy/Data/Employee.csv";
+            BufferedReader reader = Files.newBufferedReader(Paths.get(path));
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+            for (CSVRecord csvRecord : csvParser) {
+                String id = csvRecord.get(0);
+                String name = csvRecord.get(1);
+                int age = Integer.parseInt(csvRecord.get(2));
+                String address = csvRecord.get(3);
+                Employee employee = new Employee(id, name, age, address);
+                employees.add(employee);
+            }
+
+        } catch (Exception e) {
+
+        }
+        return employees;
     }
 
 }

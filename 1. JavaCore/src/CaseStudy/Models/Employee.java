@@ -3,6 +3,7 @@ package CaseStudy.Models;
 import java.text.Format;
 
 public class Employee {
+    private String id;
     private String name;
     private int age;
     private String address;
@@ -14,6 +15,20 @@ public class Employee {
         this.address = address;
     }
 
+    public Employee(String id, String name, int age, String address) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

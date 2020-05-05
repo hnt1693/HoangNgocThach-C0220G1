@@ -5,11 +5,14 @@ import CaseStudy.Models.*;
 import java.io.File;
 import java.util.*;
 
+import static java.lang.String.valueOf;
+
 public class MainController {
     static ArrayList<Villa> villaList = new ArrayList<>();
     static ArrayList<House> houseList = new ArrayList<>();
     static ArrayList<Room> roomList = new ArrayList<>();
     static ArrayList<Customer> customers = new ArrayList<>();
+    static Queue<Customer> bookingMovieTicket = new LinkedList<>();
     static int selectedMainMenu;
     static int selectedServicesMenu;
 
@@ -132,35 +135,162 @@ public class MainController {
                 break;
             }
             case 8: {
-                findEmployee();
+                addEmployee();
                 break;
             }
         }
     }
 
+    private static void addEmployee() {
+        System.out.println("Lựa chọn chức năng theo trình đơn !");
+        Scanner scanner = new Scanner(System.in);
+        int selected = 0;
+        do {
+            System.out.println("1. Add new Employee \n" +
+                    "2. Find Employee \n" +
+                    "3. Back to Menu");
+            try {
+                System.out.println("Chọn tính năng : ");
+                selected = scanner.nextInt();
+
+            } catch (InputMismatchException e) {
+                System.out.println("Vui lòng nhập 1 số");
+            }
+            switch (selected) {
+                case 1: {
+                    addnewEmployee();
+                    break;
+                }
+                case 2: {
+                    findEmployee();
+                    break;
+                }
+            }
+
+        } while (selected < 0 | selected > 2);
+
+
+    }
+
     private static void findEmployee() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập tên employee muốn tìm kiếm :");
+        String name = scanner.nextLine();
+        Stack<Employee> employees = ReadWriteData.loadEmployeeArrayList();
+        int count = 0;
+        for (int i = 0; i < employees.size(); i++) {
+            if (employees.get(i).getName().contains(name)) {
+                count++;
+                System.out.println(count +" ." + employees.get(i).getName());
+            }
+        }
+        if(count==0){
+            System.out.println("Không tồn tại nhân viên này !");
+        }
+    }
+
+    private static void addnewEmployee() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập thông tin employee : ");
+        System.out.println("Tên employee : ");
+        String name = scanner.nextLine();
+        System.out.println("Tuổi : ");
+        int age = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Địa chỉ : ");
+        String address = scanner.nextLine();
+        int id = ReadWriteData.loadEmployeeArrayList().size()+1;
+        String stringID;
+        if (id < 10) {
+            stringID = "00" + id;
+        } else if (id < 100) {
+            stringID = "0" + id;
+        } else {
+            stringID = id + "";
+        }
+        Employee employee = new Employee(stringID, name, age, address);
+        ReadWriteData.write(employee);
     }
 
     private static void bookingMovieTicket() {
-        Scanner scanner = new Scanner(System.in);
-        Queue<String> listBooking = new LinkedList<>();
-        int QUANTITIES_BOOK = 10;
-            System.out.println("Add new BookingMovieTicket : ");
-            System.out.println("Name : ");
-            String name = scanner.nextLine();
-            listBooking.add(name);
+        showBookingMovieMenu();
+    }
+
+    private static void showBookingMovieMenu() {
+        int selectedMenu = 0;
+        boolean rightChoose = false;
+
+        do {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Booking Menu : \n" +
+                    "1. Add Booking from customerList : \n" +
+                    "2. Show Booked : \n" +
+                    "3. Back to Menu");
+            System.out.print("Nhập lựa chọn theo Menu : ");
+            try {
+                selectedMenu = scanner.nextInt();
+
+            } catch (InputMismatchException e) {
+                rightChoose = false;
+                System.out.println("Vui lòng nhập lựa chọn đúng!");
+            }
+            switch (selectedMenu) {
+                case 1: {
+                    addCustomerToWaitList();
+                    break;
+                }
+                case 2: {
+                    showMovieTicketList();
+                    break;
+                }
+                case 3: {
+                    break;
+                }
+            }
+        } while (selectedMenu < 0 | selectedMenu > 3);
 
 
-        listBooking.offer("Hoang Ngoc Thach");
-        listBooking.offer("Tran Xuan Son");
-        listBooking.offer("Nguyen Thanh Tung");
-        listBooking.add("test");
-        System.out.println(listBooking.poll());
-        Iterator<String> iterator = listBooking.iterator();
-        while (iterator.hasNext()) {
-            System.out.println(iterator.next());
+    }
+
+    private static void showMovieTicketList() {
+        int MAX_TICKET = 20;
+        System.out.println("Danh sách đã đặt vé : ");
+        int size = bookingMovieTicket.size();
+        for (int i = 0; i < size & i <= MAX_TICKET; i++) {
+            System.out.println(i + 1 + " . " + bookingMovieTicket.poll().getName());
+
         }
     }
+
+    private static void addCustomerToWaitList() {
+        ArrayList<Customer> customers = ReadWriteData.LoadCustomerList();
+        int selectedCustomerIndex = 0;
+        boolean rightChosee = false;
+        do {
+            for (int i = 0; i < customers.size(); i++) {
+                System.out.println(i + 1 + ". " + customers.get(i).getName());
+            }
+            System.out.println("Nhập danh Customer bạn muốn chọn : ");
+            try {
+                Scanner scanner = new Scanner(System.in);
+                selectedCustomerIndex = scanner.nextInt();
+                bookingMovieTicket.add(customers.get(selectedCustomerIndex - 1));
+                System.out.println("Add Booking Movie Ticket success - wait confirm!");
+
+            } catch (InputMismatchException e) {
+                selectedCustomerIndex = 0;
+                System.out.println("Vui lòng nhập đúng lựa chọn !");
+            } catch (IndexOutOfBoundsException e) {
+                selectedCustomerIndex = 0;
+                System.out.println("Vui lòng nhập đúng lựa chọn ! - Lỗi out of Boundary List !");
+            }
+
+
+        } while (selectedCustomerIndex < 1 | selectedCustomerIndex > customers.size());
+
+
+    }
+
 
     private static void showEmployeeInfor() {
         Map map = ReadWriteData.loadEmployeeList();
