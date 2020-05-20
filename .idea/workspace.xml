@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20537b6d-6202-4c05-9c55-ce768ae56566" name="Default Changelist" comment="" />
+    <list default="true" id="20537b6d-6202-4c05-9c55-ce768ae56566" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/1. JavaCore/src/Bai5_Interface/Tết.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1. JavaCore/src/Bai7_CleanCodeAndRefactoring/Test.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +43,9 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../javafx-sdk-11.0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -132,8 +137,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587203561721</updated>
+      <workItem from="1589076307355" duration="113000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -156,10 +165,11 @@
       <screen x="0" y="27" width="1858" height="1053" />
     </state>
     <state x="662" y="302" width="524" height="500" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1858.1053@0.27.1858.1053" timestamp="1587375418622" />
-    <state x="557" y="353" width="735" height="509" key="FileChooserDialogImpl" timestamp="1587203747920">
-      <screen x="0" y="27" width="1858" height="1053" />
+    <state x="619" y="353" width="735" height="509" key="FileChooserDialogImpl" timestamp="1589076407850">
+      <screen x="62" y="27" width="1858" height="1053" />
     </state>
     <state x="557" y="353" width="735" height="509" key="FileChooserDialogImpl/0.27.1858.1053@0.27.1858.1053" timestamp="1587203747920" />
+    <state x="619" y="353" key="FileChooserDialogImpl/62.27.1858.1053@62.27.1858.1053" timestamp="1589076407850" />
     <state width="1812" height="232" key="GridCell.Tab.0.bottom" timestamp="1587384416929">
       <screen x="0" y="27" width="1858" height="1053" />
     </state>
@@ -200,6 +210,10 @@
       <screen x="0" y="27" width="1858" height="1053" />
     </state>
     <state x="602" y="503" width="646" height="211" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.27.1858.1053@0.27.1858.1053" timestamp="1587203737857" />
+    <state x="300" y="86" width="1372" height="932" key="new project wizard" timestamp="1589076418459">
+      <screen x="62" y="27" width="1858" height="1053" />
+    </state>
+    <state x="300" y="86" width="1372" height="932" key="new project wizard/62.27.1858.1053@62.27.1858.1053" timestamp="1589076418459" />
     <state x="627" y="293" width="593" height="519" key="refactoring.ChangeSignatureDialog" timestamp="1587378757895">
       <screen x="0" y="27" width="1858" height="1053" />
     </state>

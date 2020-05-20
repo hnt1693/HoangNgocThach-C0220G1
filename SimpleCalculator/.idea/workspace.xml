@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="769c6e17-4611-46df-a80a-e4e4f82aa839" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../1. JavaCore/src/Bai5_Interface/Tết.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2. JavaWeb/2. JavaWeb.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2. JavaWeb/JavaWeb.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cal/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cal/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../calculator/calculator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../calculator/src/ServletCal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../customerList/customerList.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../customerList/src/com/fil/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../customerList/src/com/fil/service/CustomerServiceIplm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../customerList/web/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../customerList/web/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../customer_list/customer_list.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../customer_list/src/models/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../customer_list/web/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../customer_table/customer_table.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../customer_table/src/controller/ServletList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dict/src/controllers/DictController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dict/src/models/Dictionary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dict/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dict/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dict/web/WEB-INF/views/translate.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../discount_caculator/discount_caculator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../discount_caculator/web/display.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../emailValidate/src/main/java/controllers/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../emailValidate/src/main/webapp/WEB-INF/configs/spring-config-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../emailValidate/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../emailValidate/src/main/webapp/WEB-INF/views/success.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greeting/greeting.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greeting/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greeting/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greeting2/src/controllers/GreetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greeting2/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greeting2/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greeting3/src/controllers/GreetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greeting3/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greeting3/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java-web-currency-converter/java-web-currency-converter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java-web-currency-converter/src/ServletConvert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login/src/com/fil/controllers/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login/src/com/fil/models/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login/src/com/fil/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login/src/com/fil/models/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login/web/WEB-INF/views/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login/web/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login/web/WEB-INF/views/user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product/product.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product/src/com/fil/controller/ServletProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product/src/com/fil/services/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product/web/product/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product/web/product/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sandwich/src/com/fil/controllers/SandwichController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sandwich/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sandwich/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sandwich/web/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sandwich/web/WEB-INF/views/resuilt.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple-dict/simple-dict.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simpleDict/simpleDict.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-calculator/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-greeting/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-greeting/.idea/artifacts/spring_greeting_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-greeting/.idea/libraries/Spring_5_2_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-greeting/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-greeting/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-greeting/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-greeting/spring-greeting.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/controllers/GreetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-greeting/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-timezone/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-timezone/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/controllers/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. JavaCore/src/Bai7_CleanCodeAndRefactoring/Test.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1bwnJplgXTkQmRIYEFVwxZ0bCzO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="769c6e17-4611-46df-a80a-e4e4f82aa839" name="Default Changelist" comment="" />
+      <created>1589551954498</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589551954498</updated>
+      <workItem from="1589551959935" duration="1082000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="300" y="54" width="1372" height="996" key="new project wizard" timestamp="1589552929196">
+      <screen x="62" y="27" width="1858" height="1053" />
+    </state>
+    <state x="300" y="54" width="1372" height="996" key="new project wizard/62.27.1858.1053@62.27.1858.1053" timestamp="1589552929196" />
+  </component>
+</project>

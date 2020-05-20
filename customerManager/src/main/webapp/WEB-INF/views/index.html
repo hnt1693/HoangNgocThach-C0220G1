@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<br>
+<a th:href="@{/customer/create}">
+    Add new customer
+</a></br>
+<a th:href="@{/view}">View List</a>
+
+<div>
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head"></head>
+<body>
+<h3>Product</h3>
+<p>
+    <a th:href="@{/product/create}">
+        Add new customer
+    </a>
+</p>
+<div class="notify">
+    <div th:if="${mess}">
+        <span th:text="${mess}"></span>
+    </div>
+</div>
+<table id="customers">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Image</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+        <th scope="col">View</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="row,rowStat : ${list}">
+        <td th:text="${row.getId()}"></td>
+        <td th:text="${row.getName()}"></td>
+        <td th:text="${row.getPrice()}"></td>
+        <td>
+        <img th:src="${row.getSrcImg()}" width="300px" height="200px">
+        </td>
+        <td><a th:href="@{/product/__${row.getId()}__/edit/}">edit</a></td>
+        <td><a th:href="@{/product/__${row.getId()}__/delete}">delete</a></td>
+        <td><a th:href="@{/product/__${row.getId()}__/view/}">view</a></td>
+    </tr>
+    </tbody>
+</table>
+<footer th:fragment="footer">
+    &copy; 2018 CodeGym
+</footer>
+</body>
+</html>
